@@ -1,0 +1,69 @@
+CONFIGURATION
+git config -l
+git config --global user.name "name"
+git config --global user.email "user@example.com"
+git config --global credential.helper cache
+
+START A REPOSITORY
+# Use git init for a new local repository, or git clone to copy an existing remote repository.
+git init
+git clone <remote-repo-URL>
+
+TRACK AND SAVE LOCAL CHANGES
+git status
+git add <file_name>
+git add -p <file_name>
+git add *
+git diff
+git diff --staged
+git rm <file_name>
+git mv <old_filename> <new_filename>
+git checkout <file_name>
+git checkout -- <file>
+git reset HEAD <file_name>
+git commit
+git commit -m "message"
+git commit -a
+
+INSPECT COMMIT HISTORY
+git log
+git log -p
+git log --stat
+git log -p -2
+git show
+git show <commit-id full or partial> (partial: type at least 4 to 5 characters)
+
+UNDO OR SET ASIDE CHANGES
+git commit --amend
+git commit -a --amend
+git revert HEAD
+git revert <commit-id full or partial> (partial: type at least 4 to 5 characters)
+git stash
+git stash pop
+
+WORK WITH BRANCHES
+git branch
+git branch <branch-name>
+git checkout -b <branch-name>
+git checkout <branch-name>
+git diff <branch1> <branch2>
+git log --graph --oneline
+git log --graph --oneline --all
+git merge <branch-name>
+git merge --abort
+git branch -d <branch-name>
+git branch -D <branch-name>
+
+WORK WITH REMOTES
+git remote -v
+git remote add upstream <URL>
+git remote show origin
+git branch -r
+git fetch
+git log -p origin/main
+git pull
+git push
+git push origin <branch>
+git rebase -i <branch-name>
+git push -f
+git tag <tagname>
